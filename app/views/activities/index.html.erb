@@ -1,0 +1,16 @@
+<h1>Current Activities</h1>
+<%= link_to 'New Activity', new_activity_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @activities.each do |a| %>
+  <tr>
+    <td><%= a.title %></td>
+    <td><%= a.text %></td>
+    <td><%= link_to 'Show', activity_path(a) %>
+  </tr>
+<% end %>
+</table>
