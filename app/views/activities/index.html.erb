@@ -4,6 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th colspan="2"></th>
   </tr>
 
   <% @activities.each do |a| %>
@@ -11,6 +12,12 @@
     <td><%= a.title %></td>
     <td><%= a.text %></td>
     <td><%= link_to 'Show', activity_path(a) %>
-  </tr>
-<% end %>
+    <td><%= link_to 'Edit', edit_activity_path(a) %></td>
+    <td><%= link_to 'Delete', activity_path(a),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+    <%= link_to 'Back', activities_path %>
+  <% end %>
 </table>

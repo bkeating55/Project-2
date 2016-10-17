@@ -8,4 +8,8 @@
   <%=@activities.text %>
 </p>
 
+
+  <img src = "<%=@activities.img_url%>">
+
+<%= link_to 'Edit', edit_activity_path(@activities) %>
 <%= link_to 'Back', activities_path %>

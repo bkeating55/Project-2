@@ -7,10 +7,15 @@ def show
     @activities = Activity.find(params[:id])
   end
 
-  def new
+def new
+    @activities = Activity.new
   end
 
-  def create
+def edit
+    @activities = Activity.find(params[:id])
+  end
+
+def create
     @activities = Activity.new(activity_params)
 
     if @activities.save
@@ -20,8 +25,25 @@ def show
     end
   end
 
+def update
+    @activities = Activity.find(params[:id])
+
+    if @activities.update(activity_params)
+      redirect_to @activities
+    else
+      render 'edit'
+    end
+  end
+
+def destroy
+    @activities = Activity.find(params[:id])
+    @activities.destroy
+
+    redirect_to activities_path
+  end
+
   private
     def activity_params
-      params.require(:activities).permit(:title, :text)
+      params.require(:activity).permit(:title, :text, :img_url)
     end
   end
