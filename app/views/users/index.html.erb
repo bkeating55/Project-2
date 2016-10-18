@@ -1,0 +1,23 @@
+<h1>Current User</h1>
+<%= link_to 'New User', new_activity_user_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Image</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @users.each do |u| %>
+  <tr>
+    <td><%= u.name %></td>
+    <td><%= u.age %></td>
+    <td><%= u.image_url %></td>
+    <td><%= link_to 'Show', user_path(u) %>
+    <td><%= link_to 'Edit', edit_user_path(u) %></td>
+    <td><%= link_to 'Delete', user_path(u),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

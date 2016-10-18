@@ -1,6 +1,7 @@
 class ActivitiesController < ApplicationController
   def index
     @activities = Activity.all
+    @user = User.find(params[:user_id])
   end
 
 def show
