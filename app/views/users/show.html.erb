@@ -12,8 +12,12 @@
 <img src = "<%=@user.image_url%>">
 
 <div>
+  <p>
+  <%='My Activities'%><br>
+</p>
+  <ul>
 <% @user.activities.each do |a| %>
-  <%=a.title %><br>
+  <li><%=a.title %></li><br>
   <%=a.text %>
   <%=a.img_url %>
 

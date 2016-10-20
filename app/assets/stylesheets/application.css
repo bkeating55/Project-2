@@ -31,6 +31,16 @@ a {
 }
 
 div {
-  float: left;
+  float: right;
   font-size: 25px;
+}
+
+div.p {
+  text-decoration: underline;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  height: 600px;
 }

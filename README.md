@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I used Ruby on Rails to create this application.
+There are two models: user and activities.
+The relationship is there are many activities to a user.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There are a few things I would like improve upon including:
+better css layout, I would like to improve upon the app also by including
+a random activity generator and also maybe a calendar to show how much time you
+have left before your activity begins. 
