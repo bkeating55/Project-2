@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-      @user = User.all
+      @users = User.all
   end
 
   def new
@@ -16,14 +16,14 @@ class UsersController < ApplicationController
   end
 
   def create
-      @user = User.create(user_params)
+      @user = User.new(user_params)
       if @user.save
          redirect_to @user
        else
          render 'new'
-
+       end
     end
-  end
+
 
   def update
       @user = User.find(params[:id])
@@ -46,4 +46,4 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name, :age, :image_url)
     end
-  end
+end

@@ -1,11 +1,6 @@
-<%=render 'form'%>
 
-</form>'
 
-<p>
-  <strong>Name:</strong>
-  <%=@user.name %>
-</p>
+
 
 
 <p>
@@ -21,9 +16,8 @@
 
   <img src = "<%=@activities.img_url%>">
 
-  <div>
-    <%=@user = User.create(user_params)%>
-  </div>
+
+
 
 <%= link_to 'Edit', edit_user_activity_path(@activities) %>
 <%= link_to 'Back', user_activities_path %>

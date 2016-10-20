@@ -18,6 +18,7 @@ img {
   width: 225px;
   margin-top: 150px;
   opacity: 50%;
+  position: center;
 
 }
 
@@ -27,4 +28,9 @@ a {
   color: blue;
   font-size: 25px;
   text-decoration: none;
+}
+
+div {
+  float: left;
+  font-size: 25px;
 }

@@ -11,6 +11,15 @@
 
 <img src = "<%=@user.image_url%>">
 
+<div>
+<% @user.activities.each do |a| %>
+  <%=a.title %><br>
+  <%=a.text %>
+  <%=a.img_url %>
+
+<% end %>
+</div>
+
 <%= link_to 'New Activity', new_user_activity_path(@user) %>
 <%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', new_user_path %>

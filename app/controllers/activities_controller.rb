@@ -20,12 +20,13 @@ def edit
   end
 
 def create
-    @activities = Activity.create(activity_params)
     @user = User.find(params[:user_id])
+    @activity = @user.activities.create(activity_params)
 
 
-    if @activities.save
-      redirect_to @activities
+
+    if @activity.save
+      redirect_to user_path(@user)
     else
       render 'new'
     end
