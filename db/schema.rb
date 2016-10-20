@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20161019150739) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 20161019150739) do
     t.datetime "updated_at", null: false
     t.string   "img_url"
     t.integer  "user_id"
-    t.index ["user_id"], name: "index_activities_on_user_id"
+    t.index ["user_id"], name: "index_activities_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,4 +33,5 @@ ActiveRecord::Schema.define(version: 20161019150739) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "activities", "users"
 end
