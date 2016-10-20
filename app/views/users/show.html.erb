@@ -11,5 +11,6 @@
 
 <img src = "<%=@user.image_url%>">
 
+<%= link_to 'New Activity', new_user_activity_path(@user) %>
 <%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', new_user_path %>

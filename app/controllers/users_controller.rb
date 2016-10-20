@@ -11,17 +11,17 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
   end
 
-    def edit
+  def edit
       @user = User.find(params[:id])
   end
 
   def create
-      @user = User.new(user_params)
-
+      @user = User.create(user_params)
       if @user.save
-        redirect_to @user
-      else
-        render 'new'
+         redirect_to @user
+       else
+         render 'new'
+
     end
   end
 

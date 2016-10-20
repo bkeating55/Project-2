@@ -16,6 +16,14 @@
 img {
   width: 250px;
   height: 250px;
+}
 
+table{
+  display:inline;
+}
 
+a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
 }

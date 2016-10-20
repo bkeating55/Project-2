@@ -10,14 +10,19 @@ def show
 
 def new
     @activities = Activity.new
+    @user = User.find(params[:user_id])
   end
 
 def edit
     @activities = Activity.find(params[:id])
+
+
   end
 
 def create
-    @activities = Activity.new(activity_params)
+    @activities = Activity.create(activity_params)
+    @user = User.find(params[:user_id])
+
 
     if @activities.save
       redirect_to @activities
@@ -44,7 +49,9 @@ def destroy
   end
 
   private
+
     def activity_params
       params.require(:activity).permit(:title, :text, :img_url)
+
     end
   end
