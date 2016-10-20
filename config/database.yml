@@ -80,4 +80,5 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: bucket_list_production
