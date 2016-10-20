@@ -1,36 +1,32 @@
 <%= form_for ([@user, @activities]) do |f| %>
 
+
+<br>
+<img src = "<%=@user.image_url%>">
 <p>
   <strong>Name:</strong>
   <%=@user.name %>
-</p>
-
-
-<p>
   <strong>Age:</strong>
   <%=@user.age %>
 </p>
 
-<img src = "<%=@user.image_url%>">
-
 <h3>New Activity</h3>
-
   <p>
-    <%= f.label :title %><br>
+    <%= f.label :title %>
     <%= f.text_field :title %>
-  </p>
 
-  <p>
-    <%= f.label :text %><br>
+
+
+    <%= f.label :text %>
     <%= f.text_area :text %>
-  </p>
 
-  <p>
-    <%= f.label :img_url %><br>
+
+
+    <%= f.label :img_url %>
     <%= f.text_field :img_url %>
-  </p>
 
-  <p>
+
+
     <%= f.submit %>
   </p>
 <% end %>

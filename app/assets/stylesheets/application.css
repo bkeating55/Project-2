@@ -14,16 +14,17 @@
  *= require_self
  */
 img {
-  width: 250px;
-  height: 250px;
+  height: 225px;
+  width: 225px;
+  margin-top: 150px;
+  opacity: 50%;
+
 }
 
-table{
-  display:inline;
-}
+
 
 a {
-  color: white;
+  color: blue;
   font-size: 25px;
   text-decoration: none;
 }

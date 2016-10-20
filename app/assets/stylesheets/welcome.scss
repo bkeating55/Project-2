@@ -9,22 +9,33 @@ h1 {
 }
 
 h3 {
+  padding-top: 10px;
   font-size: 35px;
   color: black;
 }
 
 body {
-  background-image: url(http://images.clipartpanda.com/pail-clipart-bucket-md.png);
+  background-image: url(http://images.clipartpanda.com/seaside-clipart-bucket-with-handle.svg);
   background-repeat: no-repeat;
   background-color: #B24A4E;
+  background-position: center;
+  background-size: 65%;
+  height: 600px;
   text-align: center;
-  padding-top: 150px;
-
+  display: block;
 }
 
 p {
+  padding-top: 80px;
   font-size: 30px;
 }
-.img{
-  width: 100px;
+
+input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+input[type=area] {
+    border: 2px solid red;
+    border-radius: 4px;
 }
