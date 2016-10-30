@@ -6,4 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# NHO: I recommend you create some more seeds to help test during development and also to jumpstart your production data
 User.create({:name => 'Billy', :age => 28})
